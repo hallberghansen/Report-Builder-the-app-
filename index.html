@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport Generator</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        /* Your existing styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #202123;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* Add your existing styles here */
+        /* ... */
+    </style>
+</head>
+<body>
+
+<!-- Your existing HTML structure -->
+<div class="top-bar">
+    <span class="menu-icon" onclick="toggleHamburgerMenu()">&#9776;</span>
+    <span class="title">Rapport Generator</span>
+</div>
+<!-- Add the rest of your HTML content here -->
+<!-- ... -->
+
+<script>
+    // Your existing JavaScript functions
+    function toggleHamburgerMenu() {
+        const menu = document.getElementById('hamburger-menu');
+        const overlay = document.getElementById('menu-overlay');
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+            overlay.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+    }
+
+    // Add the rest of your existing JavaScript code here
+    // ...
+
+    // Register the service worker for PWA
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+            console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(function(error) {
+            console.log('Service Worker registration failed:', error);
+        });
+    }
+</script>
+
+</body>
+</html>
